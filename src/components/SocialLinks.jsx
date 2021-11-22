@@ -9,12 +9,12 @@ export default function SocialLinks() {
       <div className="social-links-list" role="list">
         <div className="social-link twitter" role="listitem">
           <a target="_blank" href="https://twitter.com/MuncePhilip?ref_src=twsrc%5Etfw" className="twitter-follow-button" data-size="large" data-show-count="false">
-          <i class="bi bi-twitter"></i> Twitter
+          <i className="bi bi-twitter"></i> Twitter
           </a>
         </div>
         <div className="social-link github" role="listitem">
           <a target="_blank" href="https://github.com/muncey">
-            <i class="bi bi-github"></i> GitHub
+            <i className="bi bi-github"></i> GitHub
           </a>
         </div>
       </div>

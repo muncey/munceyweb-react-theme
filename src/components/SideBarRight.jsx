@@ -1,6 +1,6 @@
 import React from "react";
 import SocialLinks from './SocialLinks';
 
-export default function RightBar() {
+export default function SideBarRight() {
   return (<SocialLinks />)
 }

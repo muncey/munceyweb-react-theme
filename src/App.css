@@ -36,16 +36,22 @@ header .header-title, header .header-subtitle {
   width: 100%;
 }
 
-nav {
-  margin-bottom: 5px;
+.navbar ul {
+  display: flex;
+  flex-direction: column;
 }
 
-nav .nav-item {
-  margin-right: 3px;
+.nav-item a {
+  color: black;
+  text-decoration: none;
 }
 
-nav .nav-item a {
-  color: #000;
+.nav-item .home-icon {
+  color: yellow;
+}
+
+.nav-item .authors-icon {
+  color: red;
 }
 
 article {

@@ -11,7 +11,7 @@ export default function PostByline({ userId, timestamp }) {
         <img className="author-image" src={author['avatar_urls']['24']}/>
       </a>
       <div className="author-details">
-        <span class="author-name">{author.name}</span>
+        <span className="author-name">{author.name}</span>
         <TimeAgo timestamp={timestamp} />      
       </div>
     </div>

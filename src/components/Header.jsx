@@ -7,7 +7,7 @@ import React from 'react';
  * @param subtitle - secondary title
  * 
  */
-export function Header(props) {
+export default function Header(props) {
   return (
     <div className="header-wrapper">
       <header className="container">
