@@ -12,7 +12,7 @@ export default function PostByline({ userId, timestamp }) {
       </a>
       <div className="author-details">
         <span className="author-name">{author.name}</span>
-        <TimeAgo timestamp={timestamp} />      
+        <TimeAgo timestamp={timestamp} />
       </div>
     </div>
     

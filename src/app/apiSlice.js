@@ -10,7 +10,7 @@ export const apiSlice = createApi({
   endpoints: (builder) => ({
       getPosts: builder.query({
         query: (page = 1) => ({
-          url: `/posts?page=${page}&_fields=title,id,author,excerpt,date`,
+          url: `/posts?page=${page}&_fields=title,id,author,excerpt,date,meta`,
           responseHandler: async response => {
             const data = await response.json();
             const headers = response.headers;
@@ -33,7 +33,7 @@ export const apiSlice = createApi({
         },
       }),
       getPost: builder.query({
-        query: (id) => `/posts/${id}?_fields=title,id,author,content,date`
+        query: (id) => `/posts/${id}?_fields=title,id,author,content,date,meta`
       })
   })
 });

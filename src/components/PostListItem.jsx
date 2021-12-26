@@ -7,16 +7,17 @@ import { Link } from "react-router-dom";
  */
 export default function PostListItem(props) {
   const post = props.post;
+  const views = post ? parseInt(post.meta['post_views'][0]) : 1;
   return (
     <article className="post-excerpt" key={post.id}>
       <div className="post-byline">
         <PostByline userId={post.author} timestamp={post.date} />
       </div>
       <div className="post-details">
-        <h3 className="post-title">{post.title.rendered}</h3>
-        <Link to={`/posts/${post.id}`} className="button muted-button">
-          View Post
-        </Link>
+        <h3 className="post-title"><Link to={`/posts/${post.id}`}>{post.title.rendered}</Link></h3>
+        <div className="post-links">
+          <span class="post-views">{views} views</span>
+        </div>
       </div>
     </article>    
   )
