@@ -174,3 +174,12 @@ article.share {
   display: flex;
   flex-direction: row;
 }
+
+.post-content pre {
+  background-color: #e3e3e3;
+}
+
+.post-content code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.6em;  
+}

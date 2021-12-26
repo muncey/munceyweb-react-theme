@@ -16,7 +16,7 @@ export default function PostListItem(props) {
       <div className="post-details">
         <h3 className="post-title"><Link to={`/posts/${post.id}`}>{post.title.rendered}</Link></h3>
         <div className="post-links">
-          <span class="post-views">{views} views</span>
+          <span className="post-views">{views} views</span>
         </div>
       </div>
     </article>    

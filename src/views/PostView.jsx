@@ -5,6 +5,12 @@ import Spinner from '../components/Spinner'
 import PostByline from '../components/PostByline'
 import parse from "html-react-parser";
 
+function formatPost(post) {
+  const rendered = post.content.rendered;
+  let result = rendered.replace(/\<code\>/g, '<code class="prettyprint">');
+  const parsed = parse(result);
+  return parsed;
+}
 
 export default function SinglePostPage() {
   const params = useParams();
@@ -23,9 +29,14 @@ export default function SinglePostPage() {
         <div>
           <PostByline userId={post.author} timestamp={post.date} views={views} />
         </div>
-        <div className="post-content">{parse(post.content.rendered)}</div>
+        <div className="post-content">{formatPost(post)}</div>
+        <div className="post-links">
+          <span className="post-views">{views} views</span>
+        </div>
       </article>
     )
+
+    window.setTimeout(() => PR.prettyPrint(), 300);
   }
 
   return <section>{content}</section>
